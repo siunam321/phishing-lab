@@ -56,7 +56,7 @@ if ($taskContentResult->num_rows > 0) {
                 $questionContent = $taskQuestionRow["questionContentZH"];
                 $questionHint = $taskQuestionRow["questionHintZH"];
      
-                // Loop through each character to find " \:/.{}", if those doesn't contain in the $answer, then add "*"
+                // Loop through each character to find " \:/.{}@", if those doesn't contain in the $answer, then add "*"
                 // For example, "http://phishing.com is good" answer format will be: "****://********.*** ** ***"
                 $answer = mb_str_split($taskQuestionRow["taskAnswerZH"]);
                 $answerFormat = "";
@@ -75,6 +75,8 @@ if ($taskContentResult->num_rows > 0) {
                         $answerFormat .= "{";
                     } elseif ($character === "}") {
                         $answerFormat .= "}";
+                    } elseif ($character === "@") {
+                        $answerFormat .= "@";
                     } else {
                         $answerFormat .= "*";
                     }
@@ -216,7 +218,7 @@ if ($taskContentResult->num_rows > 0) {
                     // Use Bootstrap's modal components to pop up an alert box
                     myModalHeader.className = 'modal-header bg-success text-white';
                     myModalTitle.innerText = '恭喜！';
-                    myModalBody.innerHTML = `您已經完成了所有任務！<strong>你是第${completedResult}人完成此教學！</strong><br><br>但在您離開之前，請點擊<a href="#">此連結</a>來完成一份問卷調查！(這不是釣魚連結，請放心 :D)<br><br><h4>注意：刷新/關閉頁面後，所有答案將不會被保存。</h4>`;
+                    myModalBody.innerHTML = `您已經完成了所有任務！<strong>你是第${completedResult}人完成此教學！</strong><br><br>但在您離開之前，請點擊<a href="https://forms.gle/cuXPz9wj7F32eAXQ6" target="_blank">此連結</a>來完成一份問卷調查！(這不是釣魚連結，請放心 :D)<br><br><h4>注意：刷新/關閉頁面後，所有答案將不會被保存。</h4>`;
                     openModal();
                 } else {
                     numberOfAnsweredQuestion ++;

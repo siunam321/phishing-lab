@@ -14,7 +14,7 @@ function getHeader(){
         <meta name="description" content="歡迎來臨！你會喺到學到有關釣魚攻擊嘅知識！！">
         <meta property="og:title" content="釣魚網站 101 — 互動式釣魚攻擊教學" />
         <meta property="og:locale" content="zh_HK" />
-        <meta property="og:url" content="https://phishing-lab.infinityfreeapp.com/zh/" />
+        <meta property="og:url" content="https://phishing-lab.infinityfreeapp.com/hk/" />
         <meta property="og:site_name" content="互動式釣魚攻擊教學" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary" />

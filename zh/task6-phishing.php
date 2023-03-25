@@ -16,6 +16,16 @@ getHeader();
             「Instagram」，「小明」
         </p>
     </blockquoute>
+    <div class="d-grid gap-2 col-6 mx-auto"> <button class="btn btn-info collapsed btn-lg" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">     顯示例子 </button> </div>
+    <div class="collapse" id="collapseExample" style="">     <div class="card card-body"><p>標題：_________密碼重設</p>
+<p>親愛的__，</p>
+<p>我們收到通知，您的_________密碼可能已經洩漏。為了保障您的帳號安全，我們建議您立即重設您的密碼。</p>
+<p>您可以透過以下連結進入_________重設您的密碼：</p>
+<p>_________密碼重設頁面</p>
+<p>請遵循頁面上的指示完成密碼重設程序。請注意，您需要輸入您的新密碼兩次以確認您輸入的密碼正確。</p>
+<p>如果您有任何疑問或需要協助，請隨時聯繫我們的客戶支援團隊。</p>
+<p>謝謝您的合作。</p>
+<p>_________團隊</p></div> </div>
 </body>
 
 <!-- Bootstrap modal alert box -->

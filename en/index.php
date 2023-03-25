@@ -56,7 +56,7 @@ if ($taskContentResult->num_rows > 0) {
                 $questionContent = $taskQuestionRow["questionContent"];
                 $questionHint = $taskQuestionRow["questionHint"];
      
-                // Loop through each character to find " \:/.{}", if those doesn't contain in the $answer, then add "*"
+                // Loop through each character to find " \:/.{}@", if those doesn't contain in the $answer, then add "*"
                 // For example, "http://phishing.com is good" answer format will be: "****://********.*** ** ***"
                 $answer = str_split($taskQuestionRow["taskAnswerEN"]);
                 $answerFormat = "";
@@ -75,6 +75,8 @@ if ($taskContentResult->num_rows > 0) {
                         $answerFormat .= "{";
                     } elseif ($character === "}") {
                         $answerFormat .= "}";
+                    } elseif ($character === "@") {
+                        $answerFormat .= "@";
                     } else {
                         $answerFormat .= "*";
                     }
@@ -217,7 +219,7 @@ if ($taskContentResult->num_rows > 0) {
                     // Use Bootstrap's modal components to pop up an alert box
                     myModalHeader.className = 'modal-header bg-success text-white';
                     myModalTitle.innerText = 'Congratulations!';
-                    myModalBody.innerHTML = `You've answered all questions and <strong>you\'re the ${completedResult}th person to complete this lab!</strong><br><br>But before you go, please click on the <a href="#">link</a> to complete the survey! (It\'s not a phishing link, trust me :D)<br><br><h4>Note: All the answers will not be saved after refreshing/closing the page.</h4>`;
+                    myModalBody.innerHTML = `You've answered all questions and <strong>you\'re the ${completedResult}th person to complete this lab!</strong><br><br>But before you go, please click on the <a href="https://forms.gle/cuXPz9wj7F32eAXQ6" target="_blank">link</a> to complete the survey! (It\'s not a phishing link, trust me :D)<br><br><h4>Note: All the answers will not be saved after refreshing/closing the page.</h4>`;
                     openModal();
                 } else {
                     numberOfAnsweredQuestion ++;

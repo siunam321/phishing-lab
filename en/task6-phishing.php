@@ -16,6 +16,16 @@ getHeader();
             "Instagram", "Patrick Chan"
         </p>
     </blockquoute>
+    <div class="d-grid gap-2 col-6 mx-auto"> <button class="btn btn-info collapsed btn-lg" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">     Show example </button> </div>
+    <div class="collapse" id="collapseExample" style="">     <div class="card card-body"><p>Subject: _________ Password Reset</p>
+<p>Dear _______ ____,</p>
+<p>We have received a notification that your _________ password may have been compromised. To ensure the security of your account, we recommend that you reset your password immediately.</p>
+<p>You can reset your password on _________ by following this link:</p>
+<p>_________ Password Reset Page</p>
+<p>Please follow the instructions on the page to complete the password reset process. Please note that you will need to enter your new password twice to confirm that you have entered it correctly.</p>
+<p>If you have any questions or need assistance, please contact our customer support team.</p>
+<p>Thank you for your cooperation.</p>
+<p>_________ Team</p></div> </div>
 </body>
 
 <!-- Bootstrap modal alert box -->

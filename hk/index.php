@@ -42,7 +42,7 @@ if ($taskContentResult->num_rows > 0) {
         echo "            <p>$taskDescription</p>\n";
         echo "        </div>\n";
         echo "        <div class='task-questions'>\n";
-        echo "            <h3 class='text-danger'><b><u>在下方回答問題</u></b></h3>\n";
+        echo "            <h3 class='text-danger'><b><u>係下面回答問題</u></b></h3>\n";
         
         // Create each questions in each task
         $taskQuestionQuery = "SELECT * FROM tasks WHERE taskNumber=$taskNumber";
@@ -56,7 +56,7 @@ if ($taskContentResult->num_rows > 0) {
                 $questionContent = $taskQuestionRow["questionContentHK"];
                 $questionHint = $taskQuestionRow["questionHintHK"];
      
-                // Loop through each character to find " \:/.{}", if those doesn't contain in the $answer, then add "*"
+                // Loop through each character to find " \:/.{}@", if those doesn't contain in the $answer, then add "*"
                 // For example, "http://phishing.com is good" answer format will be: "****://********.*** ** ***"
                 $answer = mb_str_split($taskQuestionRow["taskAnswerHK"]);
                 $answerFormat = "";
@@ -75,6 +75,8 @@ if ($taskContentResult->num_rows > 0) {
                         $answerFormat .= "{";
                     } elseif ($character === "}") {
                         $answerFormat .= "}";
+                    } elseif ($character === "@") {
+                        $answerFormat .= "@";
                     } else {
                         $answerFormat .= "*";
                     }
@@ -216,7 +218,7 @@ if ($taskContentResult->num_rows > 0) {
                     // Use Bootstrap's modal components to pop up an alert box
                     myModalHeader.className = 'modal-header bg-success text-white';
                     myModalTitle.innerText = '恭喜！';
-                    myModalBody.innerHTML = `您已經完成曬所有任務！<mark>你係第${completedResult}人完成呢個教學！</mark><br><br>但係您離開之前，請click<a href="#">呢條link</a>去完成一份問卷調查！(呢個唔係釣魚link，請放心 :D)<br><br><h4>注意：Refresh/關閉頁面後，所有答案唔會被保存。</h4>`;
+                    myModalBody.innerHTML = `您已經完成曬所有任務！<mark>你係第${completedResult}人完成呢個教學！</mark><br><br>但係您離開之前，請click<a href="https://forms.gle/cuXPz9wj7F32eAXQ6" target="_blank">呢條link</a>去完成一份問卷調查！(呢個唔係釣魚link，請放心 :D)<br><br><h4>注意：Refresh/關閉頁面後，所有答案唔會被保存。</h4>`;
                     openModal();
                 } else {
                     numberOfAnsweredQuestion ++;
