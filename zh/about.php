@@ -47,7 +47,7 @@ $currentPage = substr($_SERVER["SCRIPT_NAME"],strrpos($_SERVER["SCRIPT_NAME"],"/
                 <li>其他：</li>
                 <ul>
                     <li><p>源代碼：<a href="https://github.com/siunam321/phishing-lab" target="_blank">GitHub</a></p></li>
-                    <li><p>PowerPoint簡報：<a href="https://github.com/siunam321/phishing-lab/SDD4006-Group-Project.pptx" target="_blank">GitHub 下載鏈接</a></p></li>
+                    <li><p>PowerPoint簡報：<a href="https://github.com/siunam321/phishing-lab/blob/main/SDD4006-Group-Project.pptx?raw=true" target="_blank">GitHub 下載鏈接</a></p></li>
                 </ul>
             </ul>
         </div>
