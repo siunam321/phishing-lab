@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: {Redacted}
--- Generation Time: Mar 25, 2023 at 09:08 AM
+-- Generation Time: Apr 13, 2023 at 08:28 AM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 7.2.22
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `{Redacted}`
+-- Database: `epiz_33755185_project`
 --
 
 -- --------------------------------------------------------
@@ -38,7 +38,7 @@ CREATE TABLE `completedNumber` (
 --
 
 INSERT INTO `completedNumber` (`completedId`, `completedNumber`) VALUES
-(1, 2);
+(1, 0);
 
 -- --------------------------------------------------------
 
@@ -109,7 +109,7 @@ INSERT INTO `tasks` (`taskId`, `taskNumber`, `questionNumber`, `taskAnswerEN`, `
 (12, 5, 1, 'Facebook', 'Facebook', 'Face****', 'Face****', 'Which social media platform is the attacker targeting?', '攻擊者瞄準了哪個社交媒體平台？', 'Facebook', 'Face****', '攻擊者target咗邊個社交媒體平台？'),
 (13, 5, 2, 'siunam321@github.io', 'siunam321@github.io', NULL, NULL, 'What is the email address of the victim?', '受害者的電郵地址是什麼？', 'siunam321@github.io', NULL, '受害者嘅Email係咩？'),
 (14, 6, 1, 'flag{I_Sent_A_Phishing_Email}', '旗幟{我發出了釣魚郵件}', NULL, NULL, 'What is the flag after you successfully sent the phishing email?', '成功發送釣魚郵件後的「旗幟」是什麼？', '旗幟{我send咗釣魚Email}', NULL, '成功send到釣魚Email之後嘅「旗幟」係咩？'),
-(15, 7, 1, NULL, NULL, NULL, NULL, 'Will you complete the survey?', '您會完成問卷調查嗎？', NULL, NULL, '你會唔會完成份問卷調查？'),
+(15, 7, 1, NULL, NULL, NULL, NULL, 'Will you complete the <a href=\"https://forms.gle/cuXPz9wj7F32eAXQ6\" target=\"_blank\"> survey</a>?', '您會完成<a href=\"https://forms.gle/cuXPz9wj7F32eAXQ6\" target=\"_blank\">問卷調查</a>嗎？', NULL, NULL, '你會唔會完成份<a href=\"https://forms.gle/cuXPz9wj7F32eAXQ6\" target=\"_blank\">問卷調查</a>？'),
 (16, 5, 3, 'P@$$word', 'P@$$word', NULL, NULL, 'What is the password of the victim?', '受害者的密碼是什麼？', 'P@$$word', NULL, '受害者嘅密碼係咩？');
 
 --
